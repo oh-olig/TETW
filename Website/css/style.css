@@ -1,0 +1,121 @@
+/*//////////////////////////////////////////////////////////
+// N A V B A R
+//////////////////////////////////////////////////////////*/
+
+.navbar { z-index: 9999; margin-top: 0 !important; }
+.navbar-default { background-color: #000019; border-color: #009ACD; }
+
+.navbar-default .navbar-brand {
+    font-family: 'blackoutmidnight', Verdana, serif;
+    font-size: 35px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover { color: #009ACD; background-color: transparent; }
+
+.navbar-default .navbar-nav > li > a { font-family: 'quicksandregular', Verdana, serif; color: #ffffff; }
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus { color: #009ACD; background-color: #000019; }
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a:hover { color: #ffffff; background-color: #009ACD; }
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus { border-color: #009ACD; background-color: #000019; }
+.navbar-default .navbar-toggle:hover { color: #000000; background-color: #009ACD; }
+
+/*//////////////////////////////////////////////////////////
+// I M A G E S
+//////////////////////////////////////////////////////////*/
+  
+/* The hero image */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../res/img/integrated-circuits.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.hero-text h1 { font-family: 'blackoutmidnight', Arial, sans-serif; font-size: 8em; }
+.hero-text p { font-family: 'quicksandregular', Arial, sans-serif; font-size: 2em; }
+
+/*//////////////////////////////////////////////////////////
+// L A Y O U T   C R O S S   P L A T F O R M
+//////////////////////////////////////////////////////////*/
+
+body, html { height: 100%; }
+body{ background-color: #ffffff; }
+
+footer { background-color: #000019; margin-top: 0 !important; }
+footer .col-xs-4 { text-align: center; }
+footer h3 { 
+    font-family: 'quicksandregular', Verdana, serif;
+    text-align: center;
+    color: #000000;
+}
+
+/*//////////////////////////////////////////////////////////
+// L A Y O U T   M O B I L E   B R O W S E R
+//////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 960px) { /* Mobile: max-width: 480px */
+
+    /* Footer */
+    footer { padding: 2% 0; }
+    footer img {
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 10%
+    }
+    footer h3 { font-size: 2.5vw; padding-bottom: 1%; }
+}
+
+/*//////////////////////////////////////////////////////////
+// L A Y O U T   P C   B R O W S E R
+//////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width: 961px) {
+
+    /* Footer */
+    footer { padding: 2% 0; }
+    footer img { height: auto; max-width: 50%; }
+    footer h3 { font-size: 0.8vw; padding-bottom: 1%; }
+}
+
+/*//////////////////////////////////////////////////////////
+// F O N T S
+//////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'blackoutmidnight';
+    src: url('../css/fonts/blackout-midnight-webfont.woff2') format('woff2'),
+         url('../css/fonts/blackout-midnight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('../css/fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../css/fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('../css/fonts/quicksand-bold-webfont.woff2') format('woff2'),
+         url('../css/fonts/quicksand-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
