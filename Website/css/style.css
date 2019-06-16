@@ -55,6 +55,8 @@
 body, html { height: 100%; }
 body{ background-color: #ffffff; }
 
+#content { height: 100%; }
+
 footer {
     background-color: #fff;
     margin-top: 0 !important;
