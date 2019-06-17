@@ -12,6 +12,7 @@ $(document).ready(function () {
 
         $("ul.nav li").removeClass("active");
         $(this).parent().toggleClass("active");
+        $(".navbar-collapse").removeClass("in");
 
         var id = $(this).attr("id");
 
