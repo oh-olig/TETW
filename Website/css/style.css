@@ -55,6 +55,13 @@
 body, html { height: 100%; }
 body{ background-color: #ffffff; margin: 0; }
 
+.wrapper {
+    height: 100%;
+    /*
+    display: grid;
+    grid-template-rows: 100% 100%;
+    */
+}
 #content { height: 100%; }
 
 footer {
