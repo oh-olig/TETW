@@ -25,17 +25,16 @@
 /*//////////////////////////////////////////////////////////
 // I M A G E S
 //////////////////////////////////////////////////////////*/
-  
-/* The hero image */
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../res/img/integrated-circuits.jpg");
+
+.home-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../res/img/home-image.jpg");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
-.hero-text {
+.home-text {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -43,8 +42,20 @@
     transform: translate(-50%, -50%);
     color: #fff;
 }
-.hero-text h1 { font-family: 'blackoutmidnight', Arial, sans-serif; font-size: 8em; }
-.hero-text p { font-family: 'quicksandregular', Arial, sans-serif; font-size: 2em; }
+.home-text h1 { font-family: 'blackoutmidnight', Arial, sans-serif; font-size: 8em; }
+.home-text p { font-family: 'quicksandregular', Arial, sans-serif; font-size: 2em; }
+
+.profile-photo {
+    margin: 2vh;
+    height: 30vh;
+    position: relative;
+    text-align: center;
+}
+.profile-photo img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
 
 /*//////////////////////////////////////////////////////////
 // L A Y O U T   C R O S S   P L A T F O R M
@@ -54,6 +65,22 @@ body{
     padding-top: 50px;
     background-color: #ffffff;
     margin: 0; 
+}
+
+.about { font-family: 'quicksandregular', Verdana, serif; }
+.about #credentials {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+.about #credentials img {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.about #credentials span {
+    padding-left: 2%;
 }
 
 footer {
@@ -73,48 +100,11 @@ footer a { display: inline-block; width: 80px; }
 #linkedin-icon { height: auto; max-width: 100%; }
 
 /*//////////////////////////////////////////////////////////
-// A B O U T   C O N T E N T
-//////////////////////////////////////////////////////////*/
-
-.skills-matrix {
-    margin: 20px auto;
-    max-width: 800px;
-    position: relative;
-}
-
-.heading { font-family: 'blackoutmidnight', Verdana, serif; font-size: 30px; }
-
-hr { border: 3px solid #f1f1f1; }
-
-.PLCopen-logic-bar {width: 50%; height: 18px; background-color: #007AC3;}
-.PLCopen-motion-control-bar {width: 25%; height: 18px; background-color: #007AC3;}
-.C-bar {width: 35%; height: 18px; background-color: #3949AB;}
-.C-sharp-bar {width: 15%; height: 18px; background-color: #455A64;}
-.HTML5-bar {width: 20%; height: 18px; background-color: #E44D26;}
-.CSS3-bar {width: 20%; height: 18px; background-color: #264DE4;}
-.JS-bar {width: 10%; height: 18px; background-color: #D4B830;}
-
-table { width: 760px; }
-table tr td { padding-bottom: 20px; }
-table tr td.logo { width: 100px; }
-table tr td img { width: 60px; height: 50px; }
-table tr td.bar { width: 560; }
-table tr td.experience { width: 100px; text-align: right; }
-
-.bar-container {
-    width: 100%;
-    background-color: #f1f1f1;
-    text-align: center;
-    color: white;
-}
-
-/*//////////////////////////////////////////////////////////
 // L A Y O U T   M O B I L E   B R O W S E R
 //////////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 800px) {
 
-    /* Bootstrap - Navbar */
     .navbar-header { float: none; }
     .navbar-left, .navbar-right { float: none !important; }
     .navbar-toggle { display: block; }
@@ -126,7 +116,34 @@ table tr td.experience { width: 100px; text-align: right; }
     .navbar-nav > li > a { padding-top: 10px; padding-bottom: 10px; }
     .collapse.in { display: block !important; }
 
-    /* Footer */
+    .about {
+        margin: 2vh auto;
+        max-width: 90vw;
+        position: relative;
+        font-size: 3vw;
+    }
+    .about #credentials img { max-width: 6vw; }
+    .about #table-heading { font-family: 'blackoutmidnight', Verdana, serif; font-size: 7vw; }
+    .about hr { border: 0.2vw solid #f1f1f1; }
+    .about table { width: 90vw; }
+    .about table tr td { padding-bottom: 2vh; }
+    .about table tr td.logo { width: 15vw; }
+    .about table tr td img { width: 7vw; }
+    .about table tr td.experience { width: 15vw; text-align: right; }
+    .about .bar-content {
+        width: 60vw;
+        background-color: #f1f1f1;
+        text-align: center;
+        color: white;
+    }
+    .about .bar-content #PLCopen-logic {   width: 50%; height: 18px; background-color: #007AC3; }
+    .about .bar-content #PLCopen-mc {      width: 25%; height: 18px; background-color: #007AC3; }
+    .about .bar-content #C {               width: 35%; height: 18px; background-color: #3949AB; }
+    .about .bar-content #C-sharp {         width: 15%; height: 18px; background-color: #455A64; }
+    .about .bar-content #HTML5 {           width: 20%; height: 18px; background-color: #E44D26; }
+    .about .bar-content #CSS3 {            width: 20%; height: 18px; background-color: #264DE4; }
+    .about .bar-content #JS {              width: 10%; height: 18px; background-color: #D4B830; }
+
     footer img { margin-bottom: 5vh }
     footer h3 { font-size: 3.5vw; padding-bottom: 1vh; }
 }
@@ -137,7 +154,34 @@ table tr td.experience { width: 100px; text-align: right; }
 
 @media only screen and (min-width: 801px) {
 
-    /* Footer */
+    .about {
+        margin: 2vh auto;
+        max-width: 40vw;
+        position: relative;
+        font-size: 1vw;
+    }
+    .about #credentials img { max-width: 2vw; }
+    .about #table-heading { font-family: 'blackoutmidnight', Verdana, serif; font-size: 2vw; }
+    .about hr { border: 0.2vw solid #f1f1f1; }
+    .about table { width: 40vw; }
+    .about table tr td { padding-bottom: 2vh; }
+    .about table tr td.logo { width: 5vw; }
+    .about table tr td img { width: 3vw; height: 5vh; }
+    .about table tr td.experience { width: 4.5vw; text-align: right; }
+    .about .bar-content {
+        width: 30vw;
+        background-color: #f1f1f1;
+        text-align: center;
+        color: white;
+    }
+    .about .bar-content #PLCopen-logic {   width: 50%; height: 18px; background-color: #007AC3; }
+    .about .bar-content #PLCopen-mc {      width: 25%; height: 18px; background-color: #007AC3; }
+    .about .bar-content #C {               width: 35%; height: 18px; background-color: #3949AB; }
+    .about .bar-content #C-sharp {         width: 15%; height: 18px; background-color: #455A64; }
+    .about .bar-content #HTML5 {           width: 20%; height: 18px; background-color: #E44D26; }
+    .about .bar-content #CSS3 {            width: 20%; height: 18px; background-color: #264DE4; }
+    .about .bar-content #JS {              width: 10%; height: 18px; background-color: #D4B830; }
+
     footer h3 { font-size: 0.8vw; padding-bottom: 1vh; }
 }
 
@@ -152,7 +196,7 @@ table tr td.experience { width: 100px; text-align: right; }
     font-weight: normal;
     font-style: normal;
   
-  }
+}
 
 @font-face {
     font-family: 'quicksandregular';
