@@ -1,26 +1,155 @@
 /*//////////////////////////////////////////////////////////
-// N A V B A R
+// L A Y O U T   C R O S S   P L A T F O R M
 //////////////////////////////////////////////////////////*/
 
-.navbar { z-index: 9999; margin-top: 0 !important; }
-.navbar-default { background-color: #fff; border-color: #009ACD; }
+body{ margin: 0; }
 
-.navbar-default .navbar-brand {
+a, p, span, td { font-family: 'quicksandregular', Verdana, serif; }
+h1 { font-family: 'blackoutmidnight', Verdana, serif; }
+hr { border: 0.2vw solid #f1f1f1; }
+
+header { 
+    background-color: #fff;
+    overflow: hidden;
+}
+header a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 15px;
+}
+header a:first-child { 
     font-family: 'blackoutmidnight', Verdana, serif;
-    font-size: 35px;
-    color: #000 !important;
-    background-color: transparent;
+    padding: 5px 15px;
+    font-size: 31px;
+}
+header a:hover { background-color: #ddd; color: black; }
+header a.active { background-color: #009ACD; color: white; }
+header .icon {
+    mask: url("../res/icon/menu.svg");
+    mask-repeat: no-repeat;
+    height: 27px;
+    width: 27px;
+    margin: 10px;
+    display: none;
+    background: #000;
 }
 
-.navbar-default .navbar-nav > li > a { font-family: 'quicksandregular', Verdana, serif; color: #000; }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus { color: #009ACD; background-color: #fff; }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > .active > a:hover { color: #fff; background-color: #009ACD; }
+#content {
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 0.2vmax;
+    border-color: #000;
+}
 
-.navbar-default .navbar-toggle,
-.navbar-default .navbar-toggle:focus { border-color: #009ACD; background-color: #fff; }
-.navbar-default .navbar-toggle:hover { color: #000; background-color: #009ACD; }
+.home-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.home-text h1 { margin: 1vmax 0; }
+
+.credentials {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+.credentials img {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.credentials span {
+    padding-left: 2%;
+}
+
+footer {
+    height: 150px;
+    background-color: #fff;
+    padding-top: 1.5vh;
+    text-align: center;
+}
+footer a { display: inline-block; width: 80px; }
+#github-icon { height: auto; max-width: 80%; }
+#linkedin-icon { height: auto; max-width: 100%; }
+
+/*//////////////////////////////////////////////////////////
+// L A Y O U T   M O B I L E   B R O W S E R
+//////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 800px) {
+
+    h1 { font-size: 3vmax; }
+    a, p, span, td { font-size: 1.5vmax; }
+
+    header a:not(:first-child) { display: none; }
+    header .icon { float: right; display: block; }
+    header.responsive { position: relative; }
+    header.responsive .icon {
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    header.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .home-text h1 { font-size: 15vmax; }
+    .home-text p { font-size: 3.5vmax; }
+
+    .container {
+        margin: 2vh auto;
+        max-width: 90vw;
+        position: relative;
+        text-align: left;
+    }
+
+    .profile-photo { height: 30vmax; }
+    .credentials img { max-width: 3vmax; }
+    table { width: 90vw; }
+    table tr td { padding-bottom: 2vmax; }
+    table tr td.logo { width: 6vmax; }
+    table tr td img { width: 4vmax; }
+    table tr td.experience { width: 8vmax; text-align: right; }
+}
+
+/*//////////////////////////////////////////////////////////
+// L A Y O U T   P C   B R O W S E R
+//////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width: 801px) {
+
+    h1 { font-size: 2vmax; }
+    a, p, span, td { font-size: 1vmax; }
+
+    .home-text h1 { font-size: 10vmax; }
+    .home-text p { font-size: 2vmax; }
+
+    .container {
+        margin: 2vh auto;
+        max-width: 50vw;
+        position: relative;
+        text-align: left;
+    }
+
+    .profile-photo { height: 20vmax; }
+    .credentials img { max-width: 2vmax; }
+    table { width: 50vw; }
+    table tr td { padding-bottom: 2vh; }
+    table tr td.logo { width: 4vmax; }
+    table tr td img { width: 3vmax; height: 3vmax; }
+    table tr td.experience { width: 5vmax; text-align: right; }
+}
 
 /*//////////////////////////////////////////////////////////
 // I M A G E S
@@ -34,16 +163,6 @@
     background-size: cover;
     position: relative;
 }
-.home-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-}
-.home-text h1 { font-family: 'blackoutmidnight', Arial, sans-serif; font-size: 8em; }
-.home-text p { font-family: 'quicksandregular', Arial, sans-serif; font-size: 2em; }
 
 .profile-photo {
     margin: 2vh;
@@ -57,133 +176,48 @@
 }
 
 /*//////////////////////////////////////////////////////////
-// L A Y O U T   C R O S S   P L A T F O R M
+// E X P E R I E N C E   T A B L E
 //////////////////////////////////////////////////////////*/
 
-body{ 
-    padding-top: 50px;
-    background-color: #ffffff;
-    margin: 0; 
-}
-
-.about { font-family: 'quicksandregular', Verdana, serif; }
-.about #credentials {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-bottom: 2vh;
-}
-.about #credentials img {
-    height: auto;
-    display: inline-block;
-    vertical-align: middle;
-}
-.about #credentials span {
-    padding-left: 2%;
-}
-
-footer {
-    height: 200px;
-    background-color: #fff;
-    padding-top: 2vh;
-    margin-top: 0 !important;
+.bar-content {
+    background-color: #f1f1f1;
     text-align: center;
+    color: white;
 }
-footer h3 { 
-    font-family: 'quicksandregular', Verdana, serif;
-    text-align: center;
-    color: #000;
+.bar-content #PLCopen-logic {
+    width: 50%; 
+    height: 18px;
+    background-color: #007AC3; 
 }
-footer a { display: inline-block; width: 80px; }
-#github-icon { height: auto; max-width: 80%; }
-#linkedin-icon { height: auto; max-width: 100%; }
-
-/*//////////////////////////////////////////////////////////
-// L A Y O U T   M O B I L E   B R O W S E R
-//////////////////////////////////////////////////////////*/
-
-@media only screen and (max-width: 800px) {
-
-    .navbar-header { float: none; }
-    .navbar-left, .navbar-right { float: none !important; }
-    .navbar-toggle { display: block; }
-    .navbar-collapse { border-top: 1px solid transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,0.1); }
-    .navbar-fixed-top { top: 0; border-width: 0 0 1px; }
-    .navbar-collapse.collapse { display: none !important; }
-    .navbar-nav { float: none !important; margin-top: 7.5px; }
-    .navbar-nav > li { float: none; }
-    .navbar-nav > li > a { padding-top: 10px; padding-bottom: 10px; }
-    .collapse.in { display: block !important; }
-
-    .profile-photo { height: 30vmax; }
-    .about {
-        margin: 2vh auto;
-        max-width: 90vw;
-        position: relative;
-        font-size: 3vw;
-    }
-    .about #credentials img { max-width: 6vw; }
-    .about #table-heading { font-family: 'blackoutmidnight', Verdana, serif; font-size: 7vw; }
-    .about hr { border: 0.2vw solid #f1f1f1; }
-    .about table { width: 90vw; }
-    .about table tr td { padding-bottom: 2vh; }
-    .about table tr td.logo { width: 15vw; }
-    .about table tr td img { width: 7vw; }
-    .about table tr td.experience { width: 15vw; text-align: right; }
-    .about .bar-content {
-        width: 60vw;
-        background-color: #f1f1f1;
-        text-align: center;
-        color: white;
-    }
-    .about .bar-content #PLCopen-logic {   width: 50%; height: 18px; background-color: #007AC3; }
-    .about .bar-content #PLCopen-mc {      width: 25%; height: 18px; background-color: #007AC3; }
-    .about .bar-content #C {               width: 35%; height: 18px; background-color: #3949AB; }
-    .about .bar-content #C-sharp {         width: 15%; height: 18px; background-color: #455A64; }
-    .about .bar-content #HTML5 {           width: 20%; height: 18px; background-color: #E44D26; }
-    .about .bar-content #CSS3 {            width: 20%; height: 18px; background-color: #264DE4; }
-    .about .bar-content #JS {              width: 10%; height: 18px; background-color: #D4B830; }
-
-    footer img { margin-bottom: 5vh }
-    footer h3 { font-size: 3.5vw; padding-bottom: 1vh; }
+.bar-content #PLCopen-mc {
+    width: 25%;
+    height: 18px;
+    background-color: #007AC3;
 }
-
-/*//////////////////////////////////////////////////////////
-// L A Y O U T   P C   B R O W S E R
-//////////////////////////////////////////////////////////*/
-
-@media only screen and (min-width: 801px) {
-
-    .profile-photo { height: 20vmax; }
-    .about {
-        margin: 2vh auto;
-        max-width: 40vw;
-        position: relative;
-        font-size: 1vw;
-    }
-    .about #credentials img { max-width: 2vw; }
-    .about #table-heading { font-family: 'blackoutmidnight', Verdana, serif; font-size: 2vw; }
-    .about hr { border: 0.2vw solid #f1f1f1; }
-    .about table { width: 40vw; }
-    .about table tr td { padding-bottom: 2vh; }
-    .about table tr td.logo { width: 5vw; }
-    .about table tr td img { width: 3vw; height: 5vh; }
-    .about table tr td.experience { width: 4.5vw; text-align: right; }
-    .about .bar-content {
-        width: 30vw;
-        background-color: #f1f1f1;
-        text-align: center;
-        color: white;
-    }
-    .about .bar-content #PLCopen-logic {   width: 50%; height: 18px; background-color: #007AC3; }
-    .about .bar-content #PLCopen-mc {      width: 25%; height: 18px; background-color: #007AC3; }
-    .about .bar-content #C {               width: 35%; height: 18px; background-color: #3949AB; }
-    .about .bar-content #C-sharp {         width: 15%; height: 18px; background-color: #455A64; }
-    .about .bar-content #HTML5 {           width: 20%; height: 18px; background-color: #E44D26; }
-    .about .bar-content #CSS3 {            width: 20%; height: 18px; background-color: #264DE4; }
-    .about .bar-content #JS {              width: 10%; height: 18px; background-color: #D4B830; }
-
-    footer h3 { font-size: 0.8vw; padding-bottom: 1vh; }
+.bar-content #C {
+    width: 35%;
+    height: 18px;
+    background-color: #3949AB;
+}
+.bar-content #C-sharp {
+    width: 15%;
+    height: 18px;
+    background-color: #455A64;
+}
+.bar-content #HTML5 {
+    width: 20%;
+    height: 18px;
+    background-color: #E44D26;
+}
+.bar-content #CSS3 {
+    width: 20%;
+    height: 18px;
+    background-color: #264DE4;
+}
+.bar-content #JS {
+    width: 10%;
+    height: 18px;
+    background-color: #D4B830;
 }
 
 /*//////////////////////////////////////////////////////////
