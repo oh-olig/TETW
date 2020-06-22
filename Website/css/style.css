@@ -29,13 +29,11 @@ header a:first-child {
 header a:hover { background-color: #ddd; color: black; }
 header a.active { background-color: #009ACD; color: white; }
 header .icon {
-    mask: url("../res/icon/menu.svg");
-    mask-repeat: no-repeat;
     height: 27px;
     width: 27px;
     margin: 10px;
     display: none;
-    background: #000;
+    fill: #000;
 }
 
 #content {
@@ -93,7 +91,7 @@ footer a { display: inline-block; width: 80px; }
     header .icon { float: right; display: block; }
     header.responsive { position: relative; }
     header.responsive .icon {
-        background: #fff;
+        fill: #fff;
         position: absolute;
         right: 0;
         top: 0;
