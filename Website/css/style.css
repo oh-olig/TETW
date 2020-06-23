@@ -17,7 +17,6 @@ header {
     -moz-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
     -webkit-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
     box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
-    opacity: .97;
 }
 header a {
     float: left;
@@ -38,6 +37,12 @@ header .icon {
     top: 22.5px;
     height: 30px;
     fill: #000;
+}
+header.resize { 
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .97; 
 }
 header.resize a {
     line-height: 50px; 
@@ -82,7 +87,7 @@ footer {
     text-align: center;
     border-top: solid;
     border-width: 2px;
-    border-color: #000;
+    border-color: #009ACD;
 }
 footer a { display: inline-block; width: 80px; }
 #github-icon { height: auto; max-width: 80%; }
