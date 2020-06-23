@@ -18,12 +18,7 @@ $(document).ready(function () {
     ////////////////////////////////////////////////////////////
 
     $(".icon").on("click", function (e) {
-        var navBar = document.getElementById("header-navbar");
-        if (navBar.className === "navbar") {
-            $(".navbar").addClass("responsive");
-        } else {
-            $(".navbar").removeClass("responsive");
-        }
+        $(".navbar").toggleClass("responsive");
     });
 
     ////////////////////////////////////////////////////////////
@@ -43,7 +38,7 @@ $(document).ready(function () {
             $(".navbar").removeClass("resize");
             $(".content").removeClass("resize");
         }
-    } 
+    }
 
     ////////////////////////////////////////////////////////////
     // A N I M A T I O N
