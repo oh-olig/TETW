@@ -17,6 +17,7 @@ header {
     -moz-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
     -webkit-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
     box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
+    opacity: .97;
 }
 header a {
     float: left;
