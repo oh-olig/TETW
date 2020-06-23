@@ -14,32 +14,40 @@ header {
     position: fixed;
     z-index: 99999;
     width: 100vw;
-    border-bottom: solid;
-    border-width: 2px;
-    border-color: #000;
+    -moz-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
+    box-shadow: 0 8px 6px -6px rgba(22, 24, 25, .5);
 }
 header a {
     float: left;
     display: block;
     color: #000;
     text-align: center;
-    line-height: 50px;
+    line-height: 75px;
     text-decoration: none;
     font-size: 15px;
     padding: 0 15px;
 }
-header a:first-child { font-family: 'blackoutmidnight', Verdana, serif; font-size: 35px; }
+header a:first-child { font-family: 'blackoutmidnight', Verdana, serif; font-size: 50px; }
 header a:hover { background-color: #ddd; color: black; }
 header a.active { background-color: #009ACD; color: white; }
 header .icon {
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 22.5px;
     height: 30px;
     fill: #000;
 }
+header.resize a {
+    line-height: 50px; 
+    font-size: 15px;
+    padding: 0 15px;
+}
+header.resize a:first-child { font-size: 35px; }
+header.resize .icon { right: 20px; top: 10px; }
 
-.content { padding-top: 52px; }
+.content { padding-top: 75px; }
+.content.resize { padding-top: 50px; }
 
 .home-text {
     text-align: center;
@@ -88,7 +96,7 @@ footer a { display: inline-block; width: 80px; }
     h1 { font-size: 3vmax; }
     a, p, span, td { font-size: 1.75vmax; }
 
-    header a:not(:first-child) { display: none; }
+    header a:not(:first-child) { display: none; line-height: 50px; }
     header .icon { display: block; }
     header.responsive a {
         float: none;
@@ -125,6 +133,7 @@ footer a { display: inline-block; width: 80px; }
     h1 { font-size: 2vmax; }
     a, p, span, td { font-size: 1vmax; }
 
+    header a { line-height: 75px; }
     header .icon { display: none; }
 
     .home-text h1 { font-size: 10vmax; }
