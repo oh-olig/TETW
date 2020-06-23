@@ -11,7 +11,12 @@ hr { border: 0.2vw solid #f1f1f1; }
 header { 
     background-color: #fff;
     overflow: hidden;
+    position: fixed;
+    z-index: 99999;
     width: 100vw;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #000;
 }
 header a {
     float: left;
@@ -34,12 +39,7 @@ header .icon {
     fill: #000;
 }
 
-#content {
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 0.2vmax;
-    border-color: #000;
-}
+#content { padding-top: 52px; }
 
 .home-text {
     text-align: center;
@@ -71,6 +71,9 @@ footer {
     background-color: #fff;
     padding-top: 1.5vh;
     text-align: center;
+    border-top: solid;
+    border-width: 2px;
+    border-color: #000;
 }
 footer a { display: inline-block; width: 80px; }
 #github-icon { height: auto; max-width: 80%; }
@@ -80,7 +83,7 @@ footer a { display: inline-block; width: 80px; }
 // L A Y O U T   M O B I L E   B R O W S E R
 //////////////////////////////////////////////////////////*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
 
     h1 { font-size: 3vmax; }
     a, p, span, td { font-size: 1.75vmax; }
@@ -117,7 +120,7 @@ footer a { display: inline-block; width: 80px; }
 // L A Y O U T   P C   B R O W S E R
 //////////////////////////////////////////////////////////*/
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1025px) {
 
     h1 { font-size: 2vmax; }
     a, p, span, td { font-size: 1vmax; }
