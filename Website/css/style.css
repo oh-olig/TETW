@@ -28,15 +28,19 @@ header a {
     font-size: 15px;
     padding: 0 15px;
 }
-header a:first-child { font-family: 'blackoutmidnight', Verdana, serif; font-size: 50px; }
-header a:hover { background-color: #ddd; color: black; }
-header a.active { background-color: #009ACD; color: white; }
+header a:first-child {
+    background-color: #fff;
+    color: #009ACD;
+    font-family: 'blackoutmidnight', Verdana, serif;
+    font-size: 50px; 
+}
+header a:not(:first-child):hover { background-color: #ddd; color: black; }
 header .icon {
     position: absolute;
     right: 20px;
     top: 22.5px;
     height: 30px;
-    fill: #000;
+    fill: #009ACD;
 }
 header.resize { 
     -moz-box-shadow: none;
@@ -49,7 +53,11 @@ header.resize a {
     font-size: 15px;
     padding: 0 15px;
 }
-header.resize a:first-child { font-size: 35px; }
+header.resize a:first-child {
+    background-color: #009ACD;
+    color: #fff;
+    font-size: 35px;
+}
 header.resize .icon { right: 20px; top: 10px; }
 
 .content { padding-top: 75px; }
@@ -109,7 +117,7 @@ footer a { display: inline-block; width: 80px; }
         display: block;
         text-align: left;
     }
-    header.responsive .icon { fill: #fff; }
+    header.resize.responsive .icon { fill: #fff; }
 
     .home-text h1 { font-size: 15vmax; }
     .home-text p { font-size: 3.5vmax; }
@@ -225,7 +233,7 @@ footer a { display: inline-block; width: 80px; }
     background-color: #264DE4;
 }
 .bar-content #JS {
-    width: 10%;
+    width: 15%;
     height: 18px;
     background-color: #D4B830;
 }
