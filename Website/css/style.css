@@ -5,7 +5,7 @@
 body{ margin: 0; overflow-x: hidden; }
 
 a, p, span, td { font-family: 'quicksandregular', Verdana, serif; }
-h1 { font-family: 'blackoutmidnight', Verdana, serif; }
+h1 { font-family: 'blackoutmidnight', Verdana, serif; text-align: center; }
 hr { border: 0.2vw solid #f1f1f1; }
 
 header { 
@@ -88,6 +88,23 @@ header.resize .icon { right: 20px; top: 10px; }
     padding-left: 2%;
 }
 
+.thumbnail img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.overlay-text {
+    font-family: 'blackoutmidnight', Verdana, serif;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 footer {
     height: 150px;
     background-color: #fff;
@@ -107,7 +124,7 @@ footer a { display: inline-block; width: 80px; }
 
 @media only screen and (max-width: 1024px) {
 
-    h1 { font-size: 3vmax; }
+    h1 { font-size: 4vmax; }
     a, p, span, td { font-size: 1.75vmax; }
 
     header a:not(:first-child) { display: none; line-height: 50px; }
@@ -128,6 +145,13 @@ footer a { display: inline-block; width: 80px; }
         position: relative;
         text-align: left;
     }
+
+    .thumbnail img { 
+        width: 100%;
+        filter: contrast(20%);
+        display: inherit;
+    }
+    .overlay-text { font-size: 10vmax; }
 
     .profile-photo { height: 30vmax; }
     .credentials img { max-width: 3vmax; }
@@ -159,6 +183,12 @@ footer a { display: inline-block; width: 80px; }
         position: relative;
         text-align: left;
     }
+
+    .thumbnail img { width: 75%; }
+    .thumbnail img:hover { filter: contrast(20%); }
+    .thumbnail img:hover + .overlay-text{ display: inherit; }
+    .thumbnail img:not(:hover) + .overlay-text{ display: none; }
+    .overlay-text { font-size: 6vmax; }
 
     .profile-photo { height: 20vmax; }
     .credentials img { max-width: 2vmax; }
