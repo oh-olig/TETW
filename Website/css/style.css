@@ -88,21 +88,13 @@ header.resize .icon { right: 20px; top: 10px; }
     padding-left: 2%;
 }
 
-.thumbnail img {
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.overlay-text {
+.thumbnail { padding: 5px; }
+.thumbnail img { width: 100%; }
+.thumbnail p {
     font-family: 'blackoutmidnight', Verdana, serif;
     color: #fff;
     text-align: center;
     position: absolute;
-    z-index: 9999;
-    left: 0;
-    right: 0;
-    width: 50%;
 }
 
 footer {
@@ -147,12 +139,13 @@ footer a { display: inline-block; width: 80px; }
     }
 
     .row { display: block; }
+    .thumbnail { width: 100%; }
     .thumbnail img { filter: contrast(20%); display: inherit; }
-    .overlay-text {
-        font-size: 10vmax;
-        top: 8.5%;
-        width: 100%;
-    }
+    .thumbnail p { font-size: 10vmax; width: 100%; }
+    .thor-overlay-text { top: 10%; }
+    .peak-overlay-text { top: 32%; }
+    .ducs-overlay-text { top: 58%; }
+    .ifrr-overlay-text { top: 83%; }
 
     .profile-photo { height: 30vmax; }
     .credentials img { max-width: 3vmax; }
@@ -186,14 +179,15 @@ footer a { display: inline-block; width: 80px; }
     }
 
     .row { display: flex; }
-    .thumbnail img:hover { filter: contrast(20%); }
-    .thumbnail img:hover + .overlay-text{ display: inherit; }
-    .thumbnail img:not(:hover) + .overlay-text{ display: none; }
-    .overlay-text {
-        font-size: 6vmax;
-        top: 14%;
-        width: 50%;
-    }
+    .thumbnail { width: 50%; }
+    .thumbnail:hover img { filter: contrast(20%); }
+    .thumbnail:hover p { display: inherit; }
+    .thumbnail:not(:hover) p { display: none; }
+    .thumbnail p { font-size: 6vmax; width: 50%; }
+    .thor-overlay-text { top: 14%; }
+    .peak-overlay-text { font-size: 3.5vmax !important; top: 17%; }
+    .ducs-overlay-text { top: 60%; }
+    .ifrr-overlay-text { top: 60%; }
 
     .profile-photo { height: 20vmax; }
     .credentials img { max-width: 2vmax; }
