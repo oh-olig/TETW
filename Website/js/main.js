@@ -1,19 +1,6 @@
 $(document).ready(function () {
     
     ////////////////////////////////////////////////////////////
-    // P A G E   N A V I G A T I O N
-    ////////////////////////////////////////////////////////////
-
-    $(".content").load("content/home.html");
-
-    $("header a").on("click", function (e) {
-        var id = $(this).attr("id");
-        $(".content").load(id);
-        window.scroll(0, 0);
-        $(".navbar").removeClass("responsive");
-    });
-
-    ////////////////////////////////////////////////////////////
     // R E S P O N S I V E   N A V B A R
     ////////////////////////////////////////////////////////////
 
