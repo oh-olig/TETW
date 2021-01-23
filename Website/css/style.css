@@ -111,6 +111,7 @@ footer a {
     width: 80px;
     padding-bottom: 2vh;
 }
+.tetw-logo { font-family: 'blackoutmidnight', Verdana, serif; text-align: center; }
 #github-icon { height: auto; max-width: 80%; }
 #linkedin-icon { height: auto; max-width: 100%; }
 
