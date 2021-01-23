@@ -145,11 +145,11 @@ footer a {
     .row { display: block; }
     .thumbnail { width: 100%; }
     .thumbnail img { filter: contrast(20%); display: inherit; }
-    .thumbnail p { font-size: 6vmax; width: 100%; }
-    .thor-overlay-text { top: 11.5%; }
-    .peak-overlay-text { top: 33.5%; }
-    .ducs-overlay-text { top: 59.5%; }
-    .ifrr-overlay-text { top: 84.5%; }
+    .thumbnail p { font-size: 10vmax; width: 100%; }
+    .thor-overlay-text { top: 7.5%; }
+    .peak-overlay-text { font-size: 6vmax !important; top: 33.5%; }
+    .ducs-overlay-text { top: 56%; }
+    .ifrr-overlay-text { top: 79.5%; }
 
     .profile-photo { height: 30vmax; }
     .credentials img { max-width: 3vmax; }
